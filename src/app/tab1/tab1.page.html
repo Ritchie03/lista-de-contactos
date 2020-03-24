@@ -1,17 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title style="text-align: center;"> 
+    Agenda
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <legend style="text-align: center; font-size: 20px; margin-top: 5%;">Agrega Un Nuevo Contacto</legend> <br> <br>
+  <div class="form">
+    <ion-input type="text" class="input"  [(ngModel)]="Nombre" placeholder="Nombre" style="background-color: rgba(0, 0, 255, 0.219);">
+    </ion-input> <br> <br>
+    <ion-input type="Number" class="input" [(ngModel)]="Telefono" placeholder="Telefono"></ion-input> <br> <br>
+    <ion-input type="text" class="input" [(ngModel)]="Mail" placeholder="Correo Electronico" style="background-color: rgba(0, 0, 255, 0.219);" >
+    </ion-input> <br> <br>
+    <ion-input type="text" class="input" [(ngModel)]="Coments" placeholder="Comentarios"></ion-input> <br> <br>
+    <ion-input type="date" class="input" [(ngModel)]="Cumple" placeholder="Fecha de Nacimiento" style="background-color: rgba(0, 0, 255, 0.219);" >
+    </ion-input> <br> <br> <br> <br>
+    <ion-button class="input" (click)="addContact(Nombre,Telefono, Mail ,Coments,Cumple)">Agregar</ion-button>
+  </div>
 </ion-content>
